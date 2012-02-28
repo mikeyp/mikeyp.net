@@ -1,0 +1,5 @@
+source "http://rubygems.org"
+gem "jekyll"
+gem "rdiscount"
+gem "ruby-hmac"
+gem "chronic"
