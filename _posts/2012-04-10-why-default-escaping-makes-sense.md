@@ -28,7 +28,7 @@ and it produces some output that looks like this:
 <p>Bacon ipsum dolor sit amet shank meatloaf consequat ex,</p>
 {% endhighlight %}
 
-Now imagine you inherit this code or find this in a snippet somewhere online, and copy and paste it to your template. Do you know if those variables are escaped? Do you know where to look in some buried preprocess function to see if those variables are safe? Do you know what one of the most common security problems in contributed Drupal modules is? (Hint 15 of the 20 most recent [security announcements](http://drupal.org/security/contrib) mention something called [Cross-site scripting](http://en.wikipedia.org/wiki/Cross-site_scripting))
+Now imagine you inherit this code or find this in a snippet somewhere online, and copy and paste it to your template. Do you know if those variables are escaped? Do you know where to look in some buried preprocess function to see if those variables are safe? Can you name the most common security problem in contributed Drupal modules? (Hint 15 of the 20 most recent [security announcements](http://drupal.org/security/contrib) mention something called [Cross-site scripting](http://en.wikipedia.org/wiki/Cross-site_scripting))
 
 Imagine the same template in TWIG:
 
