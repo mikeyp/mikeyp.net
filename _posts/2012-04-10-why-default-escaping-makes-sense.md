@@ -12,7 +12,7 @@ Lately there has been a [discussion](http://drupal.org/node/1499460) in the Drup
 
 >Again, I don't see how that's more secure than our current system; in our current system, we generally don't ask the person coding HTML in a template file to make these kinds of security decisions at all, but rather we pre-sanitize all common/documented variables for them.
 
-In my recent work with node.js/jade and Rails 3 (with either ERB, HAML, or Slim) I've used quite a few auto-escaping template systems, and its one of the things I miss the most when coming back to Drupal work. To explain why I fid it so valuable I've prepared a couple of short examples, that although somewhat contrived, adequately demonstrate the issue.
+In my recent work with node.js/jade and Rails 3 (with either ERB, HAML, or Slim) I've used quite a few auto-escaping template systems, and its one of the things I miss the most when coming back to Drupal work. To explain why I find it so valuable I've prepared a couple of short examples, that although somewhat contrived, adequately demonstrate the issue.
 
 Say I've got a straight PHP template that looks something like this:
 
