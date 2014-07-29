@@ -1,0 +1,10 @@
+a {
+  @include transition(.5s);
+  text-decoration: none;
+}
+
+p {
+  font-size: 19px;
+  color: #333;
+  margin: 1em 0;
+}

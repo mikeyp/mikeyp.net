@@ -1,0 +1,100 @@
+<% content_for :title do %>
+  <%= current_page.data.title %>
+<% end %>
+
+<% content_for :per_page_header do %>
+  <% if current_page.data.background_color %>
+    <style>
+      article.wrapper {
+        background-color: <%= current_page.data.background_color %>;
+      }
+    </style>
+  <% end %>
+<% end %>
+
+<% wrap_layout :layout do %>
+  <article class="wrapper">
+
+    <div class="banner_container">
+      <% if current_page.data.background_image %>
+        <%= image_tag current_page.data.background_image, class: "user_banner animated" %>
+      <% end %>
+    </div>
+
+    <div class="shade" style="display:block"></div>
+
+    <div class="page" style="position:relative; z-index:10">
+      <div class="big_article_header">
+        <div class="profile_header header_background_text">
+          <%= image_tag owner_info('image'), class: "profile_pic", alt: owner_info('name') %>
+          <h1><%= owner_info('name') %></h1>  
+
+          <div class="profile_sentence header_background_text">
+            <p><%= owner_info('about') %></p>
+          </div>
+
+          <div class="profile_meta profile_menu_links header_background_text">
+            <ul>
+              <% if owner_info('links') %>
+                <% owner_info('links').each do |link| %>
+                  <li><%= link_to link['title'], link['url'] %></a></li>
+                <% end %>
+              <% end %>
+            </ul> 
+          </div>
+          <div class="subscription_area">
+            <a class="animate_btn subscription_btn subscribe fa fa-plus" href="/email_subscriptions/new"><span>Subscribe</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-body page-body">
+      <div class="page">
+        <div class="article-padding page-content">
+
+          <%= yield %>
+
+          <div class="clear"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <div style="position:relative; z-index:100">
+      <div class="page footer_section">
+        <% if current_page.data.next_post_url %>
+          <div class="align_center read_next">
+            <h2 class="read_next_btn"><a href="<%= current_page.data.next_post_url %>" class="read_next_link" title="Read Next">Read Next: <%= current_page.data.next_post_title %></a>
+            </h2>
+          </div>
+        <% end %>
+
+        <div class="bottom_menu_links align_center header_background_text">
+          <ul>
+            <% if owner_info('links') %>
+              <% owner_info('links').each do |link| %>
+                <li><a href="<%= link['url'] %>"><%= link['title'] %></a></li>
+              <% end %>
+            <% end %>
+          </ul> 
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="page">
+          <div class="bottom_footer_area">
+            <p class="align_center header_background_text">
+
+             <%= owner_info('also') %>
+             <br>
+               &copy; 2004-<%= DateTime::now.strftime('%Y') %> <a href="<%= data.config.base_url %>"><%= data.config.site_name %></a><br><br>
+
+           </p>
+         </div>
+       </div>
+     </div>
+   </div>
+
+  </article>
+<% end %>

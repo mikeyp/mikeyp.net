@@ -1,0 +1,113 @@
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+div.site {
+  width: 100%;
+  min-height: 1323px;
+}
+
+article.wrapper {
+  position: relative;
+  z-index: 0;
+}
+
+.user_banner {
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: none;
+  overflow-x: hidden;
+}
+
+.subscription_area {
+  margin-top: 30px;
+}
+
+.shade {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.pic_and_name {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.profile_meta {
+  margin-top: 20px;
+}
+
+.profile_menu_links {
+  position: relative;
+  margin-top: -15px;
+}
+
+.article-body {
+  position: relative;
+  background-color: #fff;
+}
+
+.page-body {
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 60px;
+  margin-bottom: 0;
+}
+
+.article-padding {
+  padding-top: 60px;
+}
+
+.name_and_tag {
+  margin-top: 60px;
+}
+
+.footer_section {
+  margin-top: 70px;
+}
+
+.read_next {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.align_center {
+  text-align: center;
+}
+
+.bottom_menu_links {
+  position: relative;
+}
+
+.bottom_menu_links ul {
+  padding-left: 0;
+}
+
+.footer {
+  margin-top: 0;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.bottom_footer_area {
+  margin-top: 60px;
+}

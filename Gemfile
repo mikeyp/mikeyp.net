@@ -1,5 +1,12 @@
-source "http://rubygems.org"
-gem "jekyll"
-gem "rdiscount"
-gem "ruby-hmac"
-gem "chronic"
+# If you have OpenSSL installed, we recommend updating
+# the following line to use "https"
+source 'http://rubygems.org'
+
+gem "middleman", "~> 3.3.3"
+gem "middleman-blog", "~> 3.5.3"
+gem "middleman-livereload"
+gem "middleman-alias"
+gem "middleman-deploy"
+
+# For feed.xml.builder
+gem "builder", "~> 3.0"

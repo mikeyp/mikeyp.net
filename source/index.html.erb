@@ -1,0 +1,112 @@
+---
+---
+
+<% content_for :title do %>
+  <%= blog.articles.first.data.title %>
+<% end %>
+
+<% content_for :per_page_header do %>
+  <% if blog.articles.first.data.background_color %>
+    <style>
+      article.wrapper {
+        background-color: <%= blog.articles.first.data.background_color %>;
+      }
+    </style>
+  <% end %>
+<% end %>
+
+
+  <article class="wrapper">
+
+      <div class="banner_container">
+        <% if blog.articles.first.data.background_image %>
+          <%= image_tag blog.articles.first.data.background_image, class: "user_banner animated" %>
+        <% end %>
+      </div>
+
+      <div class="shade" style="display:block"></div>
+
+      <div class="page" style="position:relative; z-index:10">
+        <div class="big_article_header">
+          <h1 class="header_title header_background_text"><%= blog.articles.first.data.title %></h1>
+          <h3 class="header_subtitle header_background_text"><i><%= blog.articles.first.data.subtitle %></i></h3>
+
+          <div class="pic_and_name">
+            <a href="<%= author_info(blog.articles.first, 'url') %>">
+              <%= image_tag author_info(blog.articles.first, 'image'), class: "new_bio_pic", alt: author_info(blog.articles.first, 'name') %>
+            </a>
+            <div class="name_link">
+              <a href="<%= author_info(blog.articles.first, 'url') %>" class="header_background_text"><%= author_info(blog.articles.first, 'name') %></a> 
+            </div>  
+          </div>        
+        </div>
+      </div>
+
+      <div class="article-body page-body">
+        <div class="page">
+          <div class="article-padding page-content">
+            
+            <%= blog.articles.first.body %>
+            
+            <div class="clear"></div>
+            
+            <p class="name_and_tag">
+              <a href="<%= author_info(blog.articles.first, 'url') %>"><%= author_info(blog.articles.first, 'name') %></a>
+              –  <i class="author_tagline"><%= author_info(blog.articles.first, 'description') %></i>
+            </p>
+
+            <div class="entry_meta_area">
+              <p class="actions">
+                <span class="entry_date"><%= blog.articles.first.date.strftime('%B %e, %Y') %></span> 
+  
+      
+                <span class="share_social">
+                  <a href="http://www.twitter.com/share?url=<%= url_for(blog.articles.first) %>&amp;text=<%= blog.articles.first.data.title %>" title="Share this post on Twitter" data-lang="en" onclick="return !window.open(this.href, 'Twitter', 'width=640,height=300')"><i class="fa fa-twitter"></i></a>
+
+                  <a target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')" href="http://www.facebook.com/sharer/sharer.php?u=<%= url_for(blog.articles.first) %>" title="Share this post on Facebook"><i class="fa fa-facebook"></i></a>
+
+                  <a href="http://plus.google.com/share?url=<%= url_for(blog.articles.first) %>" target="_blank" onclick="return !window.open(this.href, 'Google +', 'width=640,height=300')" title="Share this post on Google +"><i class="last_link fa fa-google-plus"></i></a>
+                </span>
+              </p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div style="position:relative; z-index:100">
+        <div class="page footer_section">
+          <% if blog.articles.first.data.next_post_url %>
+            <div class="align_center read_next">
+              <h2 class="read_next_btn"><a href="<%= blog.articles.first.data.next_post_url %>" class="read_next_link" title="Read Next">Read Next: <%= blog.articles.first.data.next_post_title %></a>
+              </h2>
+            </div>
+          <% end %>
+
+          <div class="bottom_menu_links align_center header_background_text">
+            <ul>
+              <% if author_info(blog.articles.first, 'links') %>
+              <% author_info(blog.articles.first, 'links').each do |link| %>
+                <li><a href="<%= link['url'] %>"><%= link['title'] %></a></li>
+              <% end %>
+              <% end %>
+            </ul> 
+          </div>
+        </div>
+
+        <div class="footer">
+          <div class="page">
+            <div class="bottom_footer_area">
+              <p class="align_center header_background_text">
+
+               <%= author_info(blog.articles.first, 'also') %>
+               <br>
+               &copy; 2004-<%= DateTime::now.strftime('%Y') %> <a href="<%= data.config.base_url %>"><%= data.config.site_name %></a><br><br>
+               
+             </p>
+           </div>
+         </div>
+       </div>
+     </div>
+
+    </article>

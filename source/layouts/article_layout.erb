@@ -1,0 +1,110 @@
+<% content_for :title do %>
+  <%= current_page.data.title %>
+<% end %>
+
+<% content_for :per_page_header do %>
+  <% if current_page.data.background_color %>
+    <style>
+      article.wrapper {
+        background-color: <%= current_page.data.background_color %>;
+      }
+    </style>
+  <% end %>
+<% end %>
+
+<% wrap_layout :layout do %>
+  <article class="wrapper">
+
+      <div class="banner_container">
+        <% if current_page.data.background_image %>
+          <%= image_tag current_page.data.background_image, class: "user_banner animated" %>
+        <% end %>
+      </div>
+
+      <div class="shade" style="display:block"></div>
+
+      <div class="page" style="position:relative; z-index:10">
+        <div class="big_article_header">
+          <h1 class="header_title header_background_text"><%= current_page.data.title %></h1>
+          <h3 class="header_subtitle header_background_text"><i><%= current_page.data.subtitle %></i></h3>
+
+          <div class="pic_and_name">
+            <a href="<%= author_info(current_page, 'url') %>">
+              <%= image_tag author_info(current_page, 'image'), class: "new_bio_pic", alt: author_info(current_page, 'name') %>
+            </a>
+            <div class="name_link">
+              <a href="<%= author_info(current_page, 'url') %>" class="header_background_text"><%= author_info(current_page, 'name') %></a> 
+            </div>  
+          </div>        
+        </div>
+      </div>
+
+      <div class="article-body page-body">
+        <div class="page">
+          <div class="article-padding page-content">
+            
+            <%= yield %>
+            
+            <div class="clear"></div>
+            
+            <p class="name_and_tag">
+              <a href="<%= author_info(current_page, 'url') %>"><%= author_info(current_page, 'name') %></a>
+              –  <i class="author_tagline"><%= author_info(current_page, 'description') %></i>
+            </p>
+
+            <div class="entry_meta_area">
+              <p class="actions">
+                <span class="entry_date"><%= current_page.date.strftime('%B %e, %Y') %></span> 
+  
+      
+                <span class="share_social">
+                  <a href="http://www.twitter.com/share?url=<%= url_for(current_page) %>&amp;text=<%= current_page.data.title %>" title="Share this post on Twitter" data-lang="en" onclick="return !window.open(this.href, 'Twitter', 'width=640,height=300')"><i class="fa fa-twitter"></i></a>
+
+                  <a target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')" href="http://www.facebook.com/sharer/sharer.php?u=<%= url_for(current_page) %>" title="Share this post on Facebook"><i class="fa fa-facebook"></i></a>
+
+                  <a href="http://plus.google.com/share?url=<%= url_for(current_page) %>" target="_blank" onclick="return !window.open(this.href, 'Google +', 'width=640,height=300')" title="Share this post on Google +"><i class="last_link fa fa-google-plus"></i></a>
+                </span>
+              </p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div style="position:relative; z-index:100">
+        <div class="page footer_section">
+          <% if current_page.data.next_post_url %>
+            <div class="align_center read_next">
+              <h2 class="read_next_btn"><a href="<%= current_page.data.next_post_url %>" class="read_next_link" title="Read Next">Read Next: <%= current_page.data.next_post_title %></a>
+              </h2>
+            </div>
+          <% end %>
+
+          <div class="bottom_menu_links align_center header_background_text">
+            <ul>
+              <% if author_info(current_page, 'links') %>
+              <% author_info(current_page, 'links').each do |link| %>
+                <li><a href="<%= link['url'] %>"><%= link['title'] %></a></li>
+              <% end %>
+              <% end %>
+            </ul> 
+          </div>
+        </div>
+
+        <div class="footer">
+          <div class="page">
+            <div class="bottom_footer_area">
+              <p class="align_center header_background_text">
+
+               <%= author_info(current_page, 'also') %>
+               <br>
+               &copy; 2004-<%= DateTime::now.strftime('%Y') %> <a href="<%= data.config.base_url %>"><%= data.config.site_name %></a><br><br>
+               
+             </p>
+           </div>
+         </div>
+       </div>
+     </div>
+
+    </article>
+<% end %>
