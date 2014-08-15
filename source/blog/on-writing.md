@@ -3,7 +3,7 @@ title: On Writing
 author: mdp
 date: {}
 alias: "index.php/2013/01/on-writing/"
-published: true
+published: false
 ---
 
 <blockquote><p>If I’d had more time, I’d have written a shorter post.</p></blockquote>
