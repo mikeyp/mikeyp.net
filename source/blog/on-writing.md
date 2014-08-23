@@ -1,8 +1,8 @@
 ---
 title: On Writing
 author: mdp
-date: {}
-alias: "index.php/2013/01/on-writing/"
+date: 2013-01-29
+alias: index.php/2013/01/on-writing/
 published: false
 ---
 
