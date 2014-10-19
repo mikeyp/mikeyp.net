@@ -7,6 +7,7 @@
 activate :deploy do |deploy|
   deploy.method = :rsync
   deploy.host   = "mikeyp.net"
+  deploy.user   = "mdp"
   deploy.path   = "/var/www/mikeyp.net"
   deploy.build_before = true # default: false
   deploy.clean = true #default: false
@@ -77,7 +78,9 @@ page "/index.html", layout: "layout"
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-activate :livereload
+configure :development do
+  activate :livereload
+end
 
 # Methods defined in the helpers block are available in templates
 # helpers do
