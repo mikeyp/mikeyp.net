@@ -4,7 +4,7 @@ subtitle: Ladies and gentleman, you are about to read a story of web development
 date: 2013-06-11
 author: mdp
 background_color: "#7A050B"
-background_image: https://silvrback.s3.amazonaws.com/uploads/33f5f162-867d-477d-971b-a0772b0c7a86/deskandcomputer_low_large.jpg
+background_image: deskandcomputer_low_large.jpg
 alias: index.php/2013/06/mr-cellophane-the-web-developer/
 ---
 <blockquote>
