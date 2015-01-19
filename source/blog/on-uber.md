@@ -10,7 +10,7 @@ background_image: taxis-side-by-side.jpg
 
 I keep running into people who love Uber or can't wait to try it. Maybe it's not available in their city, or they don't yet have a need for it.
 
-While I've used Uber's service in other cities, it hasn't yet been available here in Portland, until they launched without the cities approval last Friday. Many of my friends are surprised to hear that I'm bummed about this and that I'm not a fan of Uber. This post is about explaining some of the reasons I am not a fan of Uber and I don't want it operating in my town.
+While I've used Uber's service in other cities, it hasn't yet been available here in Portland, until they launched without the city's approval last Friday. Many of my friends are surprised to hear that I'm bummed about this and that I'm not a fan of Uber. This post is about explaining some of the reasons I am not a fan of Uber and I don't want it operating in my town.
 
 That said, here are a list of major concerns I have with the way Uber operates:
 
