@@ -3,7 +3,6 @@ title: Meet Mr. Cellophane
 subtitle: Ladies and gentleman, you are about to read a story of web development, audio engineering, humility and user experience
 date: 2013-06-11
 author: mdp
-background_color: "#7A050B"
 background_image: deskandcomputer_low_large.jpg
 alias: index.php/2013/06/mr-cellophane-the-web-developer/
 ---

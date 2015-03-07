@@ -3,7 +3,6 @@ title: On Uber
 subtitle: The reality of the <strike>transportation</strike> technology company
 date: 2014-12-08
 author: mdp
-background_color: "#7A050B"
 background_image: taxis-side-by-side.jpg
 
 ---
