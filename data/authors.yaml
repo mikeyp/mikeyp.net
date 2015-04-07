@@ -3,9 +3,9 @@ mdp:
     title: Software developer and marketing dude
     about: software developer and developing writer
     description: confusing archeologists since 1981
-    image: mike-small.jpg
+    image: mike-new-small.jpg
     url: http://mikeyp.net
-    also: 'You can also find me on <a href="http://twitter.com/mikey_p" class="personal_social_links">Twitter</a> and <a href="http://github.com/mikeyp" class="personal_social_links">Github</a>. Get in touch via <a href="mailto:mike@mikeyp.net" class="personal_social_links">Email</a>.'
+    also: 'You can also find me on <a href="http://twitter.com/mikey_p" class="personal_social_links">Twitter</a>, <a href="https://www.drupal.org/u/mikey_p" class="personal_social_links">Drupal.org</a>, and <a href="http://github.com/mikeyp" class="personal_social_links">Github</a>. Get in touch via <a href="mailto:mike@mikeyp.net" class="personal_social_links">Email</a>.'
     links:
         - title: Blog Home
           url: /

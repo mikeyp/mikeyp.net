@@ -213,9 +213,8 @@ li {
   width: 55px;
   height: 55px;
   background-color: #fff;
-  border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
+  @include border-top-radius(50px);
+  @include border-bottom-radius(50px);
   box-shadow: 0 0 0 2px #fff;
 }
 
@@ -223,9 +222,8 @@ li {
   width: 100px;
   height: 100px;
   background-color: #fff;
-  border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
+  @include border-top-radius(50px);
+  @include border-bottom-radius(50px);
   box-shadow: 0 0 0 5px #fff;
 }
 
