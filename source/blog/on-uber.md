@@ -4,7 +4,6 @@ subtitle: The reality of the <strike>transportation</strike> technology company
 date: 2014-12-08
 author: mdp
 background_image: taxis-side-by-side.jpg
-
 ---
 
 I keep running into people who love Uber or can't wait to try it. Maybe it's not available in their city, or they don't yet have a need for it.

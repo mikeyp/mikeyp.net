@@ -3,7 +3,8 @@ title: On Writing
 author: mdp
 date: 2013-01-29
 alias: index.php/2013/01/on-writing/
-published: false
+published: true
+background_image: typewriter-cropped.jpg
 ---
 
 <blockquote><p>If I’d had more time, I’d have written a shorter post.</p></blockquote>
