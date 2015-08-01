@@ -61,7 +61,7 @@ li {
   padding-top: 65px;
   padding-bottom: 45px;
   text-align: center;
-  
+
   a:hover {
     text-decoration: underline;
   }
@@ -295,7 +295,7 @@ li {
   blockquote p {
     display: inline;
   }
-  
+
   hr {
     clear: both;
     border: 0;
@@ -480,4 +480,10 @@ li {
   &:hover {
     color: #57ad68;
   }
+}
+
+iframe.twitter-tweet {
+        width: 600px !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
 }
