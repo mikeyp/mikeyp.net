@@ -1,5 +1,5 @@
 ---
-title: New blog, old archive
+title: On Motivations
 subtitle:
 author: mdp
 date: 2015-07-30
