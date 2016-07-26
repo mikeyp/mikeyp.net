@@ -3,13 +3,13 @@
 <% end %>
 
 <% content_for :per_page_header do %>
-  <% if current_page.data.background_color %>
-    <style>
-      article.wrapper {
-        background-color: <%= current_page.data.background_color %>;
-      }
-    </style>
-  <% end %>
+<style>
+<% if blog.articles.first.data.background_color %>
+    article.wrapper {
+      background-color: <%= blog.articles.first.data.background_color %>;
+    }
+<% end %>
+</style>
 <% end %>
 
 <% wrap_layout :layout do %>

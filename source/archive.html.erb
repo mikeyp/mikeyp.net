@@ -14,11 +14,12 @@ background_image: library-books.jpg
 <% end %>
 
 <% content_for :per_page_header do %>
+  <style>
   <% if current_page.data.background_color %>
-    <style>
+
       article.wrapper {
         background-color: <%= current_page.data.background_color %>;
       }
-    </style>
   <% end %>
+  </style>
 <% end %>
