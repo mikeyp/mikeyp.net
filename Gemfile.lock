@@ -158,6 +158,3 @@ DEPENDENCIES
   middleman-livereload
   puma (~> 2.7)
   rake (~> 10.1)
-
-BUNDLED WITH
-   1.12.5
