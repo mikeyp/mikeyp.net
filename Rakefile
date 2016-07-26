@@ -1,5 +1,5 @@
 task :default => :server
- 
+
 desc 'Clean the output directory'
 task :clean do
   sh 'rm -rf build'
@@ -24,4 +24,11 @@ end
 
 def bundle(opts = '')
   sh 'bundle exec ' + opts
+end
+
+# Hook into the rails deployment process
+namespace :assets do
+  task :precompile do
+    bundle 'middleman build'
+  end
 end
