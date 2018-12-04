@@ -117,3 +117,11 @@ end
 
 activate :directory_indexes
 activate :alias
+
+activate :s3_sync do |s3_sync|
+  s3_sync.bucket                     = 'mikeyp.net'
+  s3_sync.region                     = 'us-east-1'
+  s3_sync.prefer_gzip                = true
+  s3_sync.index_document             = 'index.html'
+  s3_sync.error_document             = '404.html'
+end

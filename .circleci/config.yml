@@ -1,0 +1,55 @@
+version: 2
+
+defaults: &defaults
+  working_directory: /tmp/mikeyp.net
+  docker:
+    - image: circleci/ruby:2.3-node-browsers
+
+jobs:
+  build:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - gem-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+            - gem-cache-v1-{{ arch }}-{{ .Branch }}
+            - gem-cache-v1
+      - run: bundle install --path vendor/bundle
+      - save_cache:
+          key: gem-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - run: bundle exec middleman build
+      - persist_to_workspace:
+          root: /tmp/mikeyp.net
+          paths:
+            - ./
+
+  deploy-production:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - gem-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+            - gem-cache-v1-{{ arch }}-{{ .Branch }}
+            - gem-cache-v1
+      - run: bundle install --path vendor/bundle
+      - save_cache:
+          key: gem-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - attach_workspace:
+          # Must be absolute path or relative path from working_directory
+          at: /tmp/mikeyp.net
+      - run: bundle exec middleman s3_sync --bucket=mikeyp.net
+
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - build
+      - deploy-production:
+          requires:
+            - build
