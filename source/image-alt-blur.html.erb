@@ -1,0 +1,24 @@
+---
+title: Blur Bookmarklet
+alias: blur.html
+background_image: city-bokeh.jpg
+---
+
+<h1>Blur images that don't have an alt tag</h1>
+
+
+<p>Based on this simple idea:</p>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">img:not([alt]) {<br> transform: rotate(0.5turn);<br>}<a href="https://twitter.com/hashtag/css?src=hash&amp;ref_src=twsrc%5Etfw">#css</a> <a href="https://twitter.com/hashtag/a11y?src=hash&amp;ref_src=twsrc%5Etfw">#a11y</a> <a href="https://t.co/lvXPNzN7s8">pic.twitter.com/lvXPNzN7s8</a></p>&mdash; Filip Dalväg 🇸🇪🇪🇺🌍 (@FrontEndFilip) <a href="https://twitter.com/FrontEndFilip/status/1166776838875701248?ref_src=twsrc%5Etfw">August 28, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>with a variation from <a href="https://twitter.com/pauldwaite/status/1167045500954140677">@pauldwaite</a></p>
+
+<p><a href="javascript:void%20function(){(function(){var%20e=document.createElement(%22style%22);e.innerHTML=%22%20img:not([alt])%20{%20filter:%20blur(20px);%20}%22;var%20t=document.querySelector(%22script%22);t.parentNode.insertBefore(e,t)})()}();">Blur inaccessible images</a></p>
+
+<p>Drag this link to your bookmarks (or favorites) bar and click to use.</p>
+
+<p>Applies the following CSS to your page:</p>
+
+<pre><code>
+img:not([alt]) { filter: blur(20px); }
+</code></pre>
