@@ -14,4 +14,4 @@ gem "builder", "~> 3.0"
 
 # For serving on heroku/dokku
 gem 'puma', '~> 2.7'
-gem 'rake', '~> 10.1'
+gem 'rake', '~> 12.3'
