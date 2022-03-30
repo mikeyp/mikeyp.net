@@ -13,5 +13,5 @@ gem 'middleman-s3_sync'
 gem "builder", "~> 3.0"
 
 # For serving on heroku/dokku
-gem 'puma', '~> 2.7'
+gem 'puma', '~> 4.3'
 gem 'rake', '~> 10.1'
